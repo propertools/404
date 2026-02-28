@@ -20,8 +20,8 @@ Preferred:
 Works (usually):
 - Open `404.html` directly in a browser.
 
-## Demo
-- `https://404.propertools.be/`
+## Demo / Integration Testing Server
+- [https://404.propertools.be/](https://404.propertools.be/)
 
 ## Deploy targets
 - **Demo:** GitHub Pages (e.g. `404.propertools.be`) using relative paths.
