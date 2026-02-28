@@ -28,3 +28,63 @@ Preferred:
 
 ```bash
 python3 -m http.server
+````
+
+Then open:
+
+```
+http://localhost:8000/
+```
+
+Opening `404.html` directly may work, but some browser features behave differently over `file://`.
+
+---
+
+## Architecture Philosophy
+
+This page is evolving toward a small JavaScript “world.”
+
+We prefer:
+
+* Explicit state over DOM side effects
+* Small, readable functions
+* Clear naming
+* A single source of truth for state
+
+If you are adding behavior, consider:
+
+* Does it introduce a new state?
+* Should that state be part of the master state machine?
+* Does it violate an invariant?
+
+---
+
+## Submitting a PR
+
+Small PRs > large PRs.
+
+If your change:
+
+* Alters architecture
+* Introduces new modes
+* Changes state flow
+* Adds a major feature
+
+Please open an issue first.
+
+---
+
+## Style Notes
+
+* Use modern, readable JavaScript.
+* Avoid clever one-liners.
+* Comment intent, not syntax.
+* Prefer clarity over density.
+
+---
+
+## License
+
+By contributing, you agree your contribution is licensed under MIT.
+
+---
