@@ -1,0 +1,28 @@
+# Proper Tools 404
+
+Static, weird, resilient.
+
+This is the 404 page for propertools.be — and a small recruiting artifact for people who read source.
+
+PRs welcome.
+
+## Rules of the game
+- Keep it static. (No build step required.)
+- No tracking. No analytics. No beacons.
+- No _external_ JS dependencies.
+- No crypto miners. No “free” CDNs.
+- Keep it lightweight. If it adds >50KB of JS, justify it.
+
+## Local test
+Open `404.html` in a browser. (Or serve it: `python3 -m http.server`.)
+
+## Deploy targets
+- **Demo:** GitHub Pages (e.g. `404.propertools.be`) using relative paths.
+- **Production:** propertools.be (can be served as `/404.html` or as a routed 404 template).
+
+## Contributing
+Small PRs > big PRs.
+If you’re unsure, please open an issue first.
+
+## License
+MIT.
