@@ -4,7 +4,28 @@ Static, weird, resilient.
 
 This is the 404 page for propertools.be — and a small recruiting artifact for people who read source.
 
+---
+
+## Supply Chain Transparency
+
+This repository contains:
+- 1 HTML file
+- 1 CSS file
+- 1 JS file
+- 34 GIFs
+
+There are no external JavaScript dependencies.
+There is no build pipeline.
+There is no package manager.
+This project contains fewer moving parts than most SBOM generators.
+
+If you find a transitive dependency, please file an issue.
+
+![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)
+
 PRs welcome.
+
+---
 
 ## Rules of the game
 - Keep it static. (No build step required.)
@@ -34,19 +55,83 @@ If you’re unsure, please open an issue first.
 ## License
 [MIT](./LICENSE)
 
-## Supply Chain Transparency
+## The Proper Tools 404 Fellowship — 2026 Season
 
-This repository contains:
-- 1 HTML file
-- 1 CSS file
-- 1 JS file
-- 34 GIFs
+**Season runs:** 01 April – 31 August 2026
+**Soft registration period:** now – 31 March 2026
 
-There are no external JavaScript dependencies.
-There is no build pipeline.
-There is no package manager.
-This project contains fewer moving parts than most SBOM generators.
+Merged pull requests during the official season are eligible for Fellowship consideration.
 
-If you find a transitive dependency, please file an issue.
+Early contributors (pre-April) will be recognized as **Founding Chaos Participants**.
 
-![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)
+---
+
+### Eligibility
+
+* Submissions must be attributable to a real GitHub account associated with an individual.
+* No anonymous or throwaway accounts.
+* No corporate accounts — except mine. 😈
+* All contributions must preserve the static-site nature of the project.
+* No external dependencies.
+* No analytics, tracking, or network calls.
+* No obfuscated code.
+
+If we have to ask whether it’s safe, it’s not.
+
+---
+
+### Adversarial / Playful Submissions
+
+We welcome clever demonstrations of edge cases, playful “malice,” and red-team imagination — provided they are:
+
+* Clearly labeled
+* Transparent in intent
+* Harmless
+* Executable in a static browser environment
+* Non-destructive
+
+We do not execute encrypted archives.
+We do not run unknown binaries.
+We do not review obfuscated payloads.
+
+Be clever.
+Be elegant.
+Be educational.
+
+---
+
+### Anti-Spam Rule
+
+Multiple trivial PRs may be treated as a single contribution for evaluation purposes.
+
+Small is fine.
+Noise is not.
+
+---
+
+### Evaluation Model
+
+Contributions are evaluated across four qualitative dimensions:
+
+* **#awesome** — meh / wow / by Turing's beard
+* **#craft** — loose / solid / surgical
+* **#coherence** — random / aligned / disturbingly aligned
+* **#entropy** — contained / playful / destabilizing
+
+This is not a point system per say.
+This is a classification system.
+
+Elegant refactoring and simplification are subject to meaningful bonus, at my discretion.
+
+---
+
+### Conduct
+
+Be respectful.
+Be funny.
+Be exquisite.
+Be kind.
+
+If you can’t manage all four, aim for at least two.
+
+---
