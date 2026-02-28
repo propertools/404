@@ -45,6 +45,7 @@ This repository contains:
 There are no external JavaScript dependencies.
 There is no build pipeline.
 There is no package manager.
+This project contains fewer moving parts than most SBOM generators.
 
 If you find a transitive dependency, please file an issue.
 
