@@ -1,0 +1,53 @@
+name: Bug report
+description: Report something broken in the 404 artifact
+title: "[bug] "
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping keep the 404 artifact coherent.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the issue clearly.
+      placeholder: What did you expect? What actually happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Provide minimal steps.
+      placeholder: |
+        1. Click ...
+        2. Toggle ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, OS, device.
+      placeholder: |
+        Browser:
+        OS:
+        Device:
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Console errors? Screenshots? Observations?
+    validations:
+      required: false
+
