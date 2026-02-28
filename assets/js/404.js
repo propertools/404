@@ -670,3 +670,12 @@
   window.addEventListener("hashchange", applyHashTriggers);
   applyHashTriggers();
 })();
+
+function internshipsToastOnce() {
+  const h = (location.hash || "").toLowerCase();
+  if (!h.includes("internships")) return;
+
+  maybeToast("📎 Internship page not found. Not open yet. PRs welcome. PRs are our short list.");
+}
+
+window.addEventListener("load", internshipsToastOnce);
