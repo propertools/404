@@ -32,4 +32,4 @@ Small PRs > big PRs.
 If you’re unsure, please open an issue first.
 
 ## License
-MIT
+[MIT](./LICENSE)
