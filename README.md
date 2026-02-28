@@ -33,3 +33,5 @@ If you’re unsure, please open an issue first.
 
 ## License
 [MIT](./LICENSE)
+
+![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)
