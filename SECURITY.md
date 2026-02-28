@@ -35,4 +35,15 @@ We prefer coordinated disclosure. If you contact us first, we will:
 - Work to reproduce and remediate
 - Credit you (if desired)
 
+## Scoring a vulnerability
+We prefer CVSS v5.0.
+
+Example severity calculation:
+
+```
+CVSS v5 (404 Artifact Edition):
+Base Score: ☠️☠️☠️☠️☠️
+Vector: CHAOS:FULL/ENTROPY:HIGH/SEMANTICS:WEAK
+```
+
 Thanks for helping keep things coherent.
