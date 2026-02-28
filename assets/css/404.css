@@ -1,0 +1,309 @@
+/* Proper Tools 404 — “between tasteful and unhinged” */
+
+/* -------------------------
+   Layout helpers (404 page)
+   ------------------------- */
+
+.pt-404 .section-card {
+  text-align: center;
+  padding: 2.5rem 2rem 3rem;
+}
+
+.pt-404 .mono-box {
+  display: inline-block;
+  text-align: left;
+  margin: 1.5rem auto 0;
+  max-width: 520px;
+}
+
+.pt-404 .mono-box div {
+  margin-bottom: 0.35rem;
+}
+
+.pt-404 .btn-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pt-404 .fox-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.pt-404 #fox-easter-egg {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  text-align: left;
+  display: inline-block;
+  line-height: 1.2;
+  margin: 0;
+}
+
+body.chaos-mode .pt-404 #fox-easter-egg {
+  color: var(--pt-green);
+  text-shadow: 0 0 8px rgba(76, 125, 74, 0.25);
+}
+
+.pt-404 .tiny-omen {
+  margin-top: 1.75rem;
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* -------------------------
+   Chaos canvas + GIF field
+   ------------------------- */
+
+.pt-404 .chaos-canvas {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: min(1400px, 72vh);
+  margin-top: 1.25rem;
+  padding: 1rem;
+  background: #000;
+  border: 2px dashed #00b5ff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+body.chaos-mode .pt-404 .chaos-canvas {
+  height: min(1800px, 78vh);
+  border-width: 3px;
+}
+
+@media (max-width: 720px) {
+  .pt-404 .chaos-canvas {
+    height: min(1300px, 72vh);
+  }
+}
+
+.pt-404 .gif-field {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.pt-404 .chaos-canvas img {
+  position: absolute;
+  width: var(--w, 120px);
+  height: auto;
+  image-rendering: pixelated;
+  border: 1px solid #222;
+  box-shadow: 0 0 10px rgba(0, 181, 255, 0.18);
+  transform: rotate(var(--r, 0deg));
+  opacity: var(--o, 1);
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.pt-404 .chaos-canvas img:hover {
+  transform: rotate(var(--r, 0deg)) scale(1.07);
+  filter: brightness(1.08);
+}
+
+/* -------------------------
+   Chaos visibility toggles
+   ------------------------- */
+
+.chaos-hidden {
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 180ms ease, transform 180ms ease, max-height 220ms ease;
+}
+
+.chaos-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  max-height: 5000px;
+}
+
+/* -------------------------
+   CRT marquee + gravity label
+   ------------------------- */
+
+.pt-404 .chaos-canvas .marquee {
+  position: relative;
+  z-index: 3;
+  margin: 0.25rem 0 0.75rem;
+
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+
+  color: #00ff66;
+  text-shadow:
+    0 0 6px rgba(0, 255, 120, 0.9),
+    0 0 12px rgba(0, 255, 120, 0.6),
+    0 0 24px rgba(0, 255, 120, 0.35);
+
+  background: rgba(0, 255, 120, 0.05);
+  padding: 0.25rem 0.5rem;
+  border: 1px solid rgba(0, 255, 120, 0.25);
+}
+
+.pt-404 .gravity-label {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  z-index: 3;
+
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+
+  color: #00ff66;
+  text-shadow:
+    0 0 6px rgba(0, 255, 120, 0.9),
+    0 0 14px rgba(0, 255, 120, 0.6),
+    0 0 28px rgba(0, 255, 120, 0.35);
+
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+@keyframes crtFlicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0.92; }
+}
+
+.pt-404 .chaos-canvas .marquee,
+.pt-404 .gravity-label {
+  animation: crtFlicker 4.2s infinite;
+}
+
+/* -------------------------
+   Toast
+   ------------------------- */
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%) translateY(18px);
+
+  background: #111;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  opacity: 0;
+  transition: all 180ms ease;
+
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+
+  z-index: 9999;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.toast.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* -------------------------
+   Legacy <blink> (haunted)
+   ------------------------- */
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* -------------------------
+   Bureaucratic tremor (contained)
+   ------------------------- */
+
+@keyframes bureaucraticTremor {
+  0%   { transform: translate3d(0, 0, 0); }
+  20%  { transform: translate3d(1px, -1px, 0); }
+  40%  { transform: translate3d(-1px, 1px, 0); }
+  60%  { transform: translate3d(1px, 1px, 0); }
+  80%  { transform: translate3d(-1px, -1px, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+.pt-404 .chaos-canvas.bureaucratic-tremor {
+  animation: bureaucraticTremor 120ms linear 1;
+}
+
+/* -------------------------
+   Core Wars background canvas
+   ------------------------- */
+
+#corewars-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+
+  opacity: 0;
+  transition: opacity 180ms ease;
+
+  filter:
+    saturate(1.35)
+    contrast(1.15)
+    brightness(1.08);
+}
+
+body.corewars-on #corewars-canvas {
+  opacity: 1;
+}
+
+body.corewars-on .pt-404 .section-card {
+  box-shadow: 0 0 0 1px rgba(0, 255, 120, 0.10), 0 18px 70px rgba(0, 0, 0, 0.35);
+}
+
+.pt-404 .site-header,
+.pt-404 .page,
+.pt-404 .site-footer {
+  position: relative;
+  z-index: 2;
+}
+
+/* -------------------------
+   Poem card (revealed by fox)
+   ------------------------- */
+
+.poem-card {
+  display: none;
+  margin-top: 1.75rem;
+  border-left: 4px solid rgba(76, 125, 74, 0.35);
+  background: #fff;
+  animation: poemReveal 0.6s ease-out forwards;
+}
+
+.poem-card.is-visible {
+  display: block;
+}
+
+@keyframes poemReveal {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Optional: reduce inline styles in HTML */
+.poem-author { margin-bottom: 0.5rem; }
+.poem-title  { margin-top: 0; }
+.poem-subtitle { margin-top: 0.25rem; }
+.poem-body { margin-top: 1rem; }
