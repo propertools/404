@@ -34,4 +34,18 @@ If you’re unsure, please open an issue first.
 ## License
 [MIT](./LICENSE)
 
+## Supply Chain Transparency
+
+This repository contains:
+- 1 HTML file
+- 1 CSS file
+- 1 JS file
+- 34 GIFs
+
+There are no external JavaScript dependencies.
+There is no build pipeline.
+There is no package manager.
+
+If you find a transitive dependency, please file an issue.
+
 ![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)
