@@ -55,6 +55,8 @@ If you’re unsure, please open an issue first.
 ## License
 [MIT](./LICENSE)
 
+---
+
 ## The Proper Tools 404 Fellowship — 2026 Season
 
 **Season runs:** 01 April – 31 August 2026
