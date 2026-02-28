@@ -1,0 +1,60 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-02-28T00:00:00Z",
+    "tools": [
+      {
+        "vendor": "Proper Tools",
+        "name": "manual",
+        "version": "1"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "propertools-404",
+      "version": "0.1.0",
+      "purl": "pkg:generic/propertools-404@0.1.0",
+      "bom-ref": "pkg:generic/propertools-404@0.1.0"
+    }
+  },
+  "components": [
+    {
+      "type": "file",
+      "name": "404.html",
+      "bom-ref": "file:404.html"
+    },
+    {
+      "type": "file",
+      "name": "assets/css/404.css",
+      "bom-ref": "file:assets/css/404.css"
+    },
+    {
+      "type": "file",
+      "name": "assets/js/404.js",
+      "bom-ref": "file:assets/js/404.js"
+    },
+    {
+      "type": "data",
+      "name": "assets/gifs/404 (34 files)",
+      "bom-ref": "dir:assets/gifs/404"
+    },
+    {
+      "type": "service",
+      "name": "propertools.be asset sideload",
+      "bom-ref": "service:https://propertools.be/assets/",
+      "description": "The demo site loads global CSS/icons from propertools.be at runtime. These assets are not distributed in this repository.",
+      "endpoints": [
+        "https://propertools.be/assets/css/main.css",
+        "https://propertools.be/assets/img/"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:generic/propertools-404@0.1.0",
+      "dependsOn": []
+    }
+  ]
+}
