@@ -25,4 +25,4 @@ Small PRs > big PRs.
 If you’re unsure, please open an issue first.
 
 ## License
-MIT.
+[MIT](https://github.com/propertools/404/blob/1048cc5511172328492f444c6fc43350b09a389e/LICENSE).
