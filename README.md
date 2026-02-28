@@ -14,7 +14,14 @@ PRs welcome.
 - Keep it lightweight. If it adds >50KB of JS, justify it.
 
 ## Local test
-Open `404.html` in a browser. (Or serve it: `python3 -m http.server`.)
+Preferred:
+- `python3 -m http.server` then open `http://localhost:8000/`
+
+Works (usually):
+- Open `404.html` directly in a browser.
+
+## Demo
+- `https://404.propertools.be/`
 
 ## Deploy targets
 - **Demo:** GitHub Pages (e.g. `404.propertools.be`) using relative paths.
