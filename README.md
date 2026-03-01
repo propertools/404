@@ -120,7 +120,7 @@ Contributions are evaluated across four qualitative dimensions:
 * **#coherence** — random / aligned / disturbingly aligned
 * **#entropy** — contained / playful / destabilizing
 
-This is not a point system per say.
+This is not a point system per se.
 This is a classification system.
 
 Elegant refactoring and simplification are subject to meaningful bonus, at my discretion.
