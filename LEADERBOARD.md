@@ -40,12 +40,25 @@ This is a classification ritual.
 
 ---
 
-## 🌟 Hall of Coherence (Illustrative)
+## 🌟 Hall of Coherence
 
-* **By Turing’s Beard Award** → @noah-phase
+The four canonical awards:
+
+* **By Turing's Beard** — the moment the room involuntarily laughs.
+* **Most Surgical** — smallest diff, biggest improvement.
+* **Most Disturbingly Aligned** — absurdity that increases reliability.
+* **Most Destabilizing (Used Responsibly)** — chaos that teaches.
+
+Bonus category: **Refactor Positive** (you removed entropy).
+Anti-category: **Glitter Bomb** (you added entropy without meaning).
+
+Illustrative recognitions (from the sample leaderboard above):
+
+* **By Turing's Beard** → @noah-phase
 * **Most Surgical** → @alex-entropy
-* **Refactor Positive** → @lena-refactor
-* **Quiet Stewardship** → @mira-static
+* **Refactor Positive** (bonus) → @lena-refactor
+
+The Disturbingly Aligned and Destabilizing awards remain open. Real fellows will populate them as the season progresses.
 
 You can win with one excellent PR.
 

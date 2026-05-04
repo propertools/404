@@ -6,13 +6,13 @@
 
 .pt-404 .section-card {
   text-align: center;
-  padding: 2.5rem 2rem 3rem;
+  padding: var(--sp-5) var(--sp-3) var(--sp-5);
 }
 
 .pt-404 .mono-box {
   display: inline-block;
   text-align: left;
-  margin: 1.5rem auto 0;
+  margin: var(--sp-3) auto 0;
   max-width: 520px;
 }
 
@@ -24,13 +24,13 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: var(--sp-1);
 }
 
 .pt-404 .fox-wrap {
   display: flex;
   justify-content: center;
-  margin-top: 2.5rem;
+  margin-top: var(--sp-5);
 }
 
 .pt-404 #fox-easter-egg {
@@ -48,8 +48,8 @@ body.chaos-mode .pt-404 #fox-easter-egg {
 }
 
 .pt-404 .tiny-omen {
-  margin-top: 1.75rem;
-  font-size: 0.85rem;
+  margin-top: var(--sp-3);
+  font-size: var(--fs-sm);
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -156,7 +156,7 @@ body.chaos-mode .pt-404 .chaos-canvas {
   transform: translateX(-50%);
   z-index: 3;
 
-  font-size: 0.8rem;
+  font-size: var(--fs-sm);
   letter-spacing: 0.12em;
   font-weight: 700;
   text-transform: uppercase;
@@ -192,13 +192,13 @@ body.chaos-mode .pt-404 .chaos-canvas {
 .toast {
   position: fixed;
   left: 50%;
-  bottom: 22px;
+  bottom: var(--sp-3);
   transform: translateX(-50%) translateY(18px);
 
   background: #111;
   color: #fff;
   padding: 0.6rem 1rem;
-  font-size: 0.85rem;
+  font-size: var(--fs-sm);
   border-radius: 8px;
   opacity: 0;
   transition: all 180ms ease;
@@ -226,6 +226,42 @@ body.chaos-mode .pt-404 .chaos-canvas {
 
 blink {
   animation: blink 1s step-end infinite;
+}
+
+/* When <blink> wraps the primary CTA, suppress the harsh outer blink
+   so the inner ghostly pulse can do its quieter work undisturbed.
+   Modern :has() — supported on Chrome 105+, Safari 15.4+, Firefox 121+.
+   Older browsers fall back to stacked animations (still legible). */
+blink:has(.btn.primary) {
+  animation: none;
+}
+
+/* -------------------------
+   Ghostly pulse — primary CTA
+   A slow green breath. Phi-adjacent rhythm.
+   ------------------------- */
+
+@keyframes ghostlyPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(76, 125, 74, 0);
+    filter: brightness(1);
+  }
+  50% {
+    box-shadow:
+      0 0 24px 4px rgba(76, 125, 74, 0.32),
+      0 0 64px 8px rgba(76, 125, 74, 0.10);
+    filter: brightness(1.06);
+  }
+}
+
+.pt-404 .btn.primary {
+  animation: ghostlyPulse 2.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pt-404 .btn.primary {
+    animation: none;
+  }
 }
 
 /* -------------------------
@@ -287,7 +323,7 @@ body.corewars-on .pt-404 .section-card {
 
 .poem-card {
   display: none;
-  margin-top: 1.75rem;
+  margin-top: var(--sp-3);
   border-left: 4px solid rgba(76, 125, 74, 0.35);
   background: #fff;
   animation: poemReveal 0.6s ease-out forwards;
@@ -303,7 +339,7 @@ body.corewars-on .pt-404 .section-card {
 }
 
 /* Optional: reduce inline styles in HTML */
-.poem-author { margin-bottom: 0.5rem; }
+.poem-author { margin-bottom: var(--sp-1); }
 .poem-title  { margin-top: 0; }
 .poem-subtitle { margin-top: 0.25rem; }
-.poem-body { margin-top: 1rem; }
+.poem-body { margin-top: var(--sp-2); }
